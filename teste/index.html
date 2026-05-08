@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café da Dodoca | Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic,wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="brand">DODOCA<span>.</span></h1>
+            <button id="open-cart" class="cart-icon-btn">CARRINHO [<span id="cart-count">0</span>]</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="dog-container">
+                <img src="https://media1.tenor.com/m/gltwWQuK0R8AAAAd/dancing-pibble-dancing-french-bulldog.gif" alt="Bulldog" class="bulldog-gif random-bulldog">
+                <span class="dog-label">Mascote da Dodoca</span>
+            </div>
+            <span class="hero-tag">Est. 2026</span>
+            <h2>O melhor café da <br><em>casa da Dodoca.</em> ☕</h2>
+            <a href="#menu" class="btn-scroll">Explorar Cardápio</a>
+            <a href="cafe-gelado.html" class="btn-scroll">Ver Cafés Gelados</a>
+        </div>
+    </header>
+
+    <section class="story-section">
+        <div class="container">
+            <h3>Sobre a Dodoca</h3>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <img src="https://media1.tenor.com/m/TTfLNiTeQnsAAAAd/dog-pup.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent);">
+                <p>A Cafeteria Dodoca é um lugar acolhedor fundado em 2026, onde o aroma do café se mistura com a doçura dos nossos quitutes. Inspirada no nosso mascote bulldog 🐶, trazemos alegria e sabor para cada visita. Venha descobrir nossas delícias quentes e geladas! ☕🍰</p>
+                <img src="https://media1.tenor.com/m/w_v3DJb-Hh8AAAAd/pibble-dance.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent); transform: scaleX(-1);">
+            </div>
+        </div>
+    </section>
+
+    <main id="menu" class="container">
+        <section class="menu-section">
+            <div class="section-header"><h3>Nosso Cardápio</h3></div>
+            <div class="tab-list">
+                <button class="category-tab active" data-category="cafe">Café</button>
+                <button class="category-tab" data-category="salgados">Salgados</button>
+                <button class="category-tab" data-category="doce">Doce</button>
+            </div>
+            <div class="category-title"><h4>Melhores Cafés</h4></div>
+            <div class="product-grid">
+
+                <div class="product-card" data-category="cafe" data-id="101" data-nome="Café Especial" data-preco="8.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=600" alt="Café">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Café Especial</h4><span>R$ 8,00</span></div>
+                </div>
+
+                <div class="product-card" data-category="salgados" data-id="102" data-nome="Coxinha" data-preco="9.50">
+                    <div class="img-wrapper">
+                        <img src="https://blog.duogourmet.com.br/wp-content/uploads/2020/04/coxinha-4161592_1920-scaled-1.jpg" alt="Coxinha">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Coxinha</h4><span>R$ 9,50</span></div>
+                </div>
+
+                <div class="product-card" data-category="salgados" data-id="103" data-nome="Pão de Queijo" data-preco="6.00">
+                    <div class="img-wrapper">
+                        <img src="pao-de-queijo.jpg" alt="Pão de Queijo">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Pão de Queijo</h4><span>R$ 6,00</span></div>
+                </div>
+
+                <div class="product-card" data-category="salgados" data-id="104" data-nome="Pão de Queijo Recheado" data-preco="8.00">
+                    <div class="img-wrapper">
+                        <img src="pao-de-queijo-recheado.jpg" alt="Pão de Queijo Recheado">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Pão de Queijo Recheado</h4><span>R$ 8,00</span></div>
+                </div>
+
+                <div class="product-card" data-category="doce" data-id="105" data-nome="Brigadeiro" data-preco="5.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=600" alt="Brigadeiro">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Brigadeiro</h4><span>R$ 5,00</span></div>
+                </div>
+
+                <div class="product-card" data-category="salgados" data-id="106" data-nome="Pastel de Carne" data-preco="7.50">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?q=80&w=600" alt="Pastel de Carne">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Pastel de Carne</h4><span>R$ 7,50</span></div>
+                </div>
+
+                <div class="product-card" data-category="doce" data-id="107" data-nome="Torta de Chocolate" data-preco="10.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=600" alt="Torta de Chocolate">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Torta de Chocolate</h4><span>R$ 10,00</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <h3>Outros Contatos</h3>
+            <p>WhatsApp 1: (11) 99999-9999</p>
+            <p>WhatsApp 2: (11) 88888-8888</p>
+                <img src="https://media1.tenor.com/m/gltwWQuK0R8AAAAd/dancing-pibble-dancing-french-bulldog.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 100px; margin-top: 10px;">
+        </section>
+    </main>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>MEU PEDIDO</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items-flow" class="cart-flow"></div>
+        <div class="cart-summary">
+            <div class="total-row"><span>TOTAL</span><span id="total-val">R$ 0,00</span></div>
+            <form id="checkout-form">
+                <input type="text" id="cust-name" placeholder="SEU NOME" required>
+                <input type="text" id="cust-address" placeholder="ENDEREÇO" required>
+                <button type="submit" class="btn-checkout">PEDIR NO WHATSAPP</button>
+            </form>
+        </div>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="notification" class="notification">Adicionado com sucesso!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Gelado - Dodoca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:italic,wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="iced-theme">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="brand">DODOCA<span>.</span></h1>
+            <div style="display: flex; gap: 10px;">
+                <a href="index.html" class="nav-link">Voltar ao Cardápio</a>
+                <button id="open-cart" class="cart-icon-btn">CARRINHO [<span id="cart-count">0</span>]</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="dog-container">
+                <img src="https://media1.tenor.com/m/gltwWQuK0R8AAAAd/dancing-pibble-dancing-french-bulldog.gif" alt="Bulldog" class="bulldog-gif random-bulldog">
+                <span class="dog-label">Mascote da Dodoca</span>
+            </div>
+            <span class="hero-tag">Refresco Gelado</span>
+            <h2>Os melhores cafés gelados <br><em>da casa da Dodoca.</em> ❄️☕</h2>
+            <a href="#menu" class="btn-scroll">Explorar Cardápio</a>
+        </div>
+    </header>
+
+    <section class="story-section">
+        <div class="container">
+            <h3>Sobre a Dodoca</h3>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <img src="https://media1.tenor.com/m/TTfLNiTeQnsAAAAd/dog-pup.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent);">
+                <p>A Cafeteria Dodoca é um lugar acolhedor fundado em 2026, onde o aroma do café se mistura com a doçura dos nossos quitutes. Inspirada no nosso mascote bulldog 🐶, trazemos alegria e sabor para cada visita. Venha descobrir nossas delícias quentes e geladas! ❄️☕</p>
+                <img src="https://media1.tenor.com/m/w_v3DJb-Hh8AAAAd/pibble-dance.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent); transform: scaleX(-1);">
+            </div>
+        </div>
+    </section>
+
+    <main id="menu" class="container">
+        <section class="menu-section">
+            <div class="section-header"><h3>Nossos Cafés Gelados</h3></div>
+            <div class="product-grid">
+
+                <div class="product-card" data-id="201" data-nome="Café Gelado Clássico" data-preco="10.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600" alt="Café Gelado">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Café Gelado Clássico</h4><span>R$ 10,00</span></div>
+                </div>
+
+                <div class="product-card" data-id="202" data-nome="Café Gelado com Chantilly" data-preco="12.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600" alt="Café Gelado com Chantilly">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Café Gelado com Chantilly</h4><span>R$ 12,00</span></div>
+                </div>
+
+                <div class="product-card" data-id="203" data-nome="Frappuccino de Baunilha" data-preco="15.00">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=600" alt="Frappuccino">
+                        <button class="add-to-cart-quick">ADICIONAR +</button>
+                    </div>
+                    <div class="product-info"><h4>Frappuccino de Baunilha</h4><span>R$ 15,00</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <h3>Outros Contatos</h3>
+            <p>WhatsApp 1: (11) 99999-9999</p>
+            <p>WhatsApp 2: (11) 88888-8888</p>
+                <img src="https://media1.tenor.com/m/gltwWQuK0R8AAAAd/dancing-pibble-dancing-french-bulldog.gif" alt="Bulldog fofo" class="random-bulldog" style="width: 100px; margin-top: 10px;">
+        </section>
+    </main>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>MEU PEDIDO</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items-flow" class="cart-flow"></div>
+        <div class="cart-summary">
+            <div class="total-row"><span>TOTAL</span><span id="total-val">R$ 0,00</span></div>
+            <form id="checkout-form">
+                <input type="text" id="cust-name" placeholder="SEU NOME" required>
+                <input type="text" id="cust-address" placeholder="ENDEREÇO" required>
+                <button type="submit" class="btn-checkout">PEDIR NO WHATSAPP</button>
+            </form>
+        </div>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="notification" class="notification">Adicionado com sucesso!</div>
+
+    <script src="script.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\gabicardoso\Desktop\teste\cafe-gelado.html
