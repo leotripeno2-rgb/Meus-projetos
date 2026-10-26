@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo de imóveis · Helena Aragão</title>
+<!-- Esta página monta o catálogo em PDF a partir de js/data.js. Para gerar de novo: abra no navegador, Ctrl+P, destino "Salvar como PDF", papel A4 paisagem, margens "Nenhuma" e marque "Gráficos de segundo plano". -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+@page{size:297mm 210mm;margin:0}
+:root{--bg:#ECE8E0;--ink:#1D1C1A;--ink2:#45423D;--gray:#77726A;--line:rgba(29,28,26,.2);--brass:#8E6F43;--brass2:#B8975F;--night:#171614;--light:#F4F1EA;
+--sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;--serif:"Instrument Serif",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#999;font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+.pg{width:297mm;height:210mm;position:relative;overflow:hidden;background:var(--bg);page-break-after:always;break-after:page;margin:0 auto}
+@media screen{.pg{margin:16px auto}}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.cap{font:500 8.5pt/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.brass{color:var(--brass)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.frame{position:absolute;inset:7mm;border:.3mm solid var(--brass2);pointer-events:none;z-index:5}
+/* capa */
+.cover{background:var(--night);color:var(--light)}
+.cover .bgi{position:absolute;inset:0;opacity:.5}
+.cover .bgi::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,22,20,.94) 0%,rgba(23,22,20,.55) 55%,rgba(23,22,20,.2) 100%)}
+.cover .in{position:absolute;left:22mm;bottom:26mm;right:22mm}
+.cover .mk{width:22mm;height:22mm;color:var(--brass2);margin-bottom:12mm}
+.cover h1{font:400 66pt/.9 var(--sans);letter-spacing:-.05em}
+.cover h1 .it{color:var(--brass2)}
+.cover p.cap{color:var(--brass2);margin-bottom:6mm}
+.cover .sub{margin-top:8mm;font-size:12pt;color:rgba(244,241,234,.75);max-width:110mm;line-height:1.5}
+.cover .top{position:absolute;left:22mm;right:22mm;top:18mm;display:flex;justify-content:space-between;color:rgba(244,241,234,.7)}
+/* sumário */
+.sum{padding:20mm 24mm}
+.sum h2{font:400 40pt/.95 var(--sans);letter-spacing:-.05em;margin:6mm 0 12mm}
+.sum table{width:100%;border-collapse:collapse}
+.sum td{padding:5.2mm 0;border-top:.25mm solid var(--line);vertical-align:baseline}
+.sum tr:last-child td{border-bottom:.25mm solid var(--line)}
+.sum .n{width:16mm;font:400 18pt/1 var(--serif);color:var(--brass)}
+.sum .t{font:400 22pt/1 var(--sans);letter-spacing:-.04em}
+.sum .l{color:var(--gray);font-size:10pt}
+.sum .p{text-align:right;font:400 18pt/1 var(--serif)}
+/* imóvel, página 1 */
+.p1 .ph{position:absolute;left:0;top:0;bottom:0;width:176mm}
+.p1 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(23,22,20,.55),transparent 38%)}
+.p1 .no{position:absolute;left:14mm;bottom:12mm;color:#fff;z-index:2}
+.p1 .no b{display:block;font:400 56pt/.8 var(--serif)}
+.p1 .no span{display:block;margin-top:4mm;opacity:.85}
+.p1 .tx{position:absolute;left:176mm;right:0;top:0;bottom:0;padding:18mm 16mm 16mm 16mm;display:flex;flex-direction:column}
+.p1 h2{font:400 36pt/.92 var(--sans);letter-spacing:-.05em;margin:5mm 0 6mm}
+.p1 .r{font-size:11pt;line-height:1.5;color:var(--ink2)}
+.p1 dl{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:5mm 6mm;padding-top:6mm;border-top:.25mm solid var(--line)}
+.p1 dt{font:500 7pt/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:2mm}
+.p1 dd{font:400 18pt/1 var(--serif)}
+.p1 .pr{margin-top:7mm;padding:6mm 0 0;border-top:.25mm solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.p1 .pr b{font:400 28pt/1 var(--serif);color:var(--brass)}
+/* imóvel, página 2 */
+.p2 .gal{position:absolute;left:0;top:0;bottom:0;width:150mm;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:2mm;padding:0}
+.p2 .gal div{overflow:hidden;position:relative}
+.p2 .gal .a{grid-row:1/3}
+.p2 .gal .c{position:relative}
+.p2 .gal em{position:absolute;left:3mm;bottom:3mm;z-index:2;padding:1.4mm 2.4mm;background:rgba(23,22,20,.7);color:#fff;font:500 7pt/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;font-style:normal}
+.p2 .tx{position:absolute;left:150mm;right:0;top:0;bottom:0;padding:18mm 16mm 16mm 16mm;display:flex;flex-direction:column;gap:5mm}
+.p2 h3{font:400 24pt/1 var(--sans);letter-spacing:-.045em}
+.p2 .txt{font-size:10.2pt;line-height:1.55;color:var(--ink2)}
+.p2 h4{font:500 7.5pt/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);padding-top:4mm;border-top:.25mm solid var(--line);margin-bottom:2.4mm}
+.p2 ul{list-style:none;font-size:9.6pt;line-height:1.5;color:var(--ink2)}
+.p2 li{padding:.8mm 0}
+.p2 li span{float:right;color:var(--gray)}
+.p2 .cols{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.p2 .hist{display:grid;grid-template-columns:1fr 1fr;gap:0 6mm}
+.p2 .hist p{font-size:9pt;line-height:1.5;color:var(--ink2);margin-bottom:3mm}
+.p2 .ft{margin-top:auto;display:flex;justify-content:space-between;color:var(--gray);font-size:8pt;letter-spacing:.08em;text-transform:uppercase}
+/* contato */
+.end{background:var(--night);color:var(--light)}
+.end .bgi{position:absolute;inset:0;opacity:.35}
+.end .bgi::after{content:"";position:absolute;inset:0;background:rgba(23,22,20,.6)}
+.end .in{position:absolute;left:24mm;right:24mm;top:50%;transform:translateY(-50%)}
+.end h2{font:400 54pt/.92 var(--sans);letter-spacing:-.05em;margin:6mm 0 12mm}
+.end h2 .it{color:var(--brass2)}
+.end dl{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0 18mm;border-top:.25mm solid rgba(184,151,95,.55);padding-top:7mm}
+.end dt{font:500 7.5pt/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brass2);margin-bottom:2.4mm}
+.end dd{font:400 15pt/1.2 var(--serif)}
+.end small{position:absolute;left:24mm;right:24mm;bottom:15mm;font-size:8pt;color:rgba(244,241,234,.5);line-height:1.5}
+</style>
+</head>
+<body>
+<div id="doc"></div>
+<script src="js/data.js"></script>
+<script>
+(function(){
+  var D = window.IMOVEIS, P = function (n) { return 'assets/foto/' + n + '-s.webp'; };
+  var name = function (n) { var a = n.split(' '); return a[0] + ' <span class="it">' + a.slice(1).join(' ') + '</span>'; };
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var MK = '<svg class="mk" viewBox="0 0 256 256"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg>';
+  var year = new Date().getFullYear();
+  var h = '';
+  h += '<section class="pg cover"><div class="bgi"><img src="' + P(D[0].fotos.abertura) + '" alt=""></div><div class="frame" style="border-color:rgba(184,151,95,.6)"></div>' +
+    '<div class="top cap"><span>Helena Aragão</span><span>Imóveis selecionados · São Paulo</span></div>' +
+    '<div class="in">' + MK + '<p class="cap">Catálogo ' + year + '</p><h1>Imóveis<br><span class="it">selecionados.</span></h1>' +
+    '<p class="sub">Casas e apartamentos escolhidos um a um e visitados antes de entrar aqui.</p></div></section>';
+  h += '<section class="pg sum"><div class="frame"></div><p class="cap brass">Neste catálogo</p><h2>' + D.length + ' <span class="it">propriedades.</span></h2><table>' +
+    D.map(function (x, k) { return '<tr><td class="n">' + pad(k + 1) + '</td><td class="t">' + name(x.n) + '</td><td class="l">' + x.cat + ' · ' + x.loc + '</td><td class="l">' + x.area + ' · ' + x.suites + ' suítes</td><td class="p">' + x.preco + '</td></tr>'; }).join('') + '</table></section>';
+  D.forEach(function (x, k) {
+    var f = x.fotos, i0 = f.interiores && f.interiores[0], i1 = f.interiores && f.interiores[1];
+    h += '<section class="pg p1"><div class="ph"><img src="' + P(f.abertura) + '" alt=""></div><div class="no"><b>' + pad(k + 1) + '</b><span class="cap">' + x.hora + ' · ' + x.cidade + '</span></div><div class="frame"></div>' +
+      '<div class="tx"><p class="cap brass">' + x.cat + ' · ' + x.loc + '</p><h2>' + name(x.n) + '</h2><p class="r">' + x.resumo + '</p>' +
+      '<dl><div><dt>Área</dt><dd>' + x.area + '</dd></div><div><dt>Suítes</dt><dd>' + x.suites + '</dd></div><div><dt>Vagas</dt><dd>' + x.vagas + '</dd></div><div><dt>Terreno</dt><dd>' + x.terreno + '</dd></div></dl>' +
+      '<div class="pr"><span class="cap" style="color:var(--gray)">Valor</span><b>' + x.preco + '</b></div></div></section>';
+    h += '<section class="pg p2"><div class="gal"><div class="a"><img src="' + P(f.galeria[0]) + '" alt=""></div><div class="c"><img src="' + P(f.detalhe) + '" alt=""></div><div class="c"><img src="' + P(i0 ? i0[1] : f.galeria[1]) + '" alt="">' + (i0 ? '<em>' + i0[0] + '</em>' : '') + '</div></div><div class="frame"></div>' +
+      '<div class="tx"><p class="cap brass">' + pad(k + 1) + ' · ' + x.loc + '</p><h3>' + name(x.n) + '</h3><p class="txt">' + x.texto + '</p>' +
+      '<div class="cols"><div><h4>Materiais</h4><ul>' + x.materiais.map(function (m) { return '<li>' + m + '</li>'; }).join('') + '</ul></div>' +
+      '<div><h4>Por perto</h4><ul>' + x.perto.map(function (m) { return '<li>' + m[0] + '<span>' + m[1] + '</span></li>'; }).join('') + '</ul></div></div>' +
+      '<div class="hist">' + x.historia.map(function (q) { return '<div><h4>' + q[0] + '</h4><p>' + q[1] + '</p></div>'; }).join('') + '</div>' +
+      '<div class="ft"><span>' + x.arq + ' · ' + x.ano + '</span><span>' + x.preco + '</span></div></div></section>';
+  });
+  h += '<section class="pg end"><div class="bgi"><img src="' + P(D[D.length - 1].fotos.abertura) + '" alt=""></div><div class="frame" style="border-color:rgba(184,151,95,.6)"></div><div class="in"><p class="cap" style="color:var(--brass2)">Contato</p><h2>Venha conhecer<br><span class="it">um lugar.</span></h2>' +
+    '<dl><div><dt>WhatsApp</dt><dd>(00) 00000-0000</dd></div><div><dt>E-mail</dt><dd>contato@helena.example</dd></div><div><dt>Atendimento</dt><dd>Seg a sáb, 9h às 19h</dd></div></dl></div>' +
+    '<small>Helena Aragão · CRECI 000000-F (exemplo). Catálogo de demonstração: valores, contatos e registro fictícios. Imagens: quadros de vídeos do Pexels e interiores do Pixabay.</small></section>';
+  document.getElementById('doc').innerHTML = h;
+})();
+</script>
+</body>
+</html>

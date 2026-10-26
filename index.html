@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Helena Aragão · Imóveis selecionados em São Paulo</title>
+<meta name="description" content="Cinco casas e apartamentos escolhidos um a um, visitados de manhã, à tarde e à noite antes de serem apresentados.">
+<meta name="theme-color" content="#E5E1D8">
+<script>
+(function(){var d=document.documentElement,c=navigator.connection||{};d.classList.add('js');
+var w=c.saveData||/2g$/.test(c.effectiveType||'')||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);if(w)d.classList.add('weak');
+if((matchMedia('(prefers-reduced-motion: reduce)').matches)||c.saveData||/2g$/.test(c.effectiveType||'')||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2))d.classList.add('lite');
+if(matchMedia('(hover:hover) and (pointer:fine)').matches)d.classList.add('fine');
+if(!d.classList.contains('lite'))d.classList.add('px-on');
+try{if(!d.classList.contains('lite')&&!sessionStorage.getItem('ha-intro'))d.classList.add('intro');}catch(e){}})();
+</script>
+<link rel="preload" as="image" href="assets/foto/vento-3.webp" imagesrcset="assets/foto/vento-3-s.webp 1200w, assets/foto/vento-3.webp 2400w" imagesizes="100vw">
+<link rel="icon" href="assets/logo/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="assets/logo/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/catalogo.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/blinds.js" defer></script>
+<script src="js/pblur.js" defer></script>
+<script src="js/extras.js" defer></script>
+</head>
+<body data-page="home">
+<div class="veil" aria-hidden="true"><svg class="mk mk-veil" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg><b>Helena <em>Aragão</em></b></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- TELA DE ENTRADA -->
+<div class="intro-screen" id="intro" aria-hidden="true">
+  <div class="intro-in">
+    <svg class="mk mk-big" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg><p class="intro-mark"><span>Helena</span> <em>Aragão</em></p>
+    <p class="intro-sub lbl">Imóveis selecionados · São Paulo</p>
+  </div>
+  <p class="intro-n"><b id="intro-n">000</b></p>
+  <div class="intro-line"><i id="intro-line"></i></div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html" aria-label="Helena Aragão, início"><svg class="mk" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg><b>Helena <em>Aragão</em></b><span class="logo-sub">Imóveis selecionados</span></a>
+  <p class="nav-ch" id="nav-ch" aria-hidden="true"><span id="nav-n">01</span><b id="nav-t">Método</b></p>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#colecao"><span data-t="Coleção">Coleção</span></a><a href="catalogo.html"><span data-t="Catálogo">Catálogo</span></a><a href="#filmes"><span data-t="Filmes">Filmes</span></a><a href="#por-dentro"><span data-t="Por dentro">Por dentro</span></a><a href="#servicos"><span data-t="Comprar e vender">Comprar e vender</span></a><a href="#contato"><span data-t="Contato">Contato</span></a>
+  </nav>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="mb-t"><span>Menu</span><span>Fechar</span></span><span class="mb-i" aria-hidden="true"><i></i><i></i></span></button>
+</header>
+<div class="menu" id="menu" inert>
+  <nav class="menu-l" aria-label="Menu">
+    <a href="#colecao" style="--i:0"><i>01</i><span>Coleção</span></a><a href="catalogo.html" style="--i:1"><i>02</i><span>Catálogo</span></a><a href="#filmes" style="--i:2"><i>03</i><span>Filmes</span></a><a href="#por-dentro" style="--i:3"><i>04</i><span>Por <em>dentro</em></span></a><a href="#servicos" style="--i:4"><i>05</i><span>Comprar e vender</span></a><a href="#sobre" style="--i:5"><i>06</i><span>Sobre</span></a><a href="#contato" style="--i:6"><i>07</i><span>Contato</span></a>
+  </nav>
+  <div class="menu-fig">
+    <img src="assets/foto/vento-3-s.webp" alt="" loading="lazy" decoding="async">
+    <div><p>São Paulo · Atendimento com hora marcada, de segunda a sábado.</p><a href="https://wa.me/5500000000000" rel="noopener">WhatsApp →</a></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span>Ver</span></div>
+
+<main>
+<!-- ABERTURA -->
+<section class="hero" id="topo">
+  <div class="hero-frame" id="hero-frame">
+    <img src="assets/foto/vento-3.webp" srcset="assets/foto/vento-3-s.webp 1200w, assets/foto/vento-3.webp 2400w" sizes="100vw" alt="Casa Vento Sul: fachada branca com beiral de madeira e jardim" width="2400" height="1350" fetchpriority="high">
+    <video class="hero-vid" id="hero-vid" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src="assets/video/casa.mp4" data-s="assets/video/casa-s.mp4"></video>
+  </div>
+  <div class="hero-in wrap">
+    <div class="hero-top cap">
+      <span style="--k:0">Nº 01 — 05</span>
+      <span style="--k:1">Casa · Alto da Figueira</span>
+      <span style="--k:2">São Paulo</span>
+      <span style="--k:3">Coleção 2026</span>
+    </div>
+    <h1 class="hero-h" id="h1">Casas <span class="it">escolhidas</span><br>uma a uma.</h1>
+    <div class="hero-foot">
+      <a class="hero-down cap" href="#metodo" style="--k:0"><i aria-hidden="true"></i>Role para conhecer</a>
+      <p class="hero-feat" style="--k:1"><b>Em destaque: Casa <em>Vento Sul</em></b><span>Alto da Figueira · 380 m² · 4 suítes · jardim que desce até a rua.</span></p>
+      <div class="hero-price" style="--k:2"><b>R$ 2,4 mi</b><a class="ln" href="imovel.html?p=casa-vento-sul">Ver a casa <i aria-hidden="true">→</i></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- AMANHECER: a rolagem leva a Casa Vento Sul da noite ao dia (três fotos tratadas, só opacidade e transform) -->
+<section class="dawn" id="amanhecer" data-hud="Amanhecer" aria-label="O amanhecer na Casa Vento Sul">
+  <div class="dawn-pin">
+    <div class="dw-st" id="dw-st">
+      <img class="dw dw-d" src="assets/foto/amanhecer-dia-s.webp" srcset="assets/foto/amanhecer-dia-s.webp 1200w, assets/foto/amanhecer-dia.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="dw dw-a" src="assets/foto/amanhecer-aurora-s.webp" srcset="assets/foto/amanhecer-aurora-s.webp 1200w, assets/foto/amanhecer-aurora.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="dw dw-n" src="assets/foto/amanhecer-noite-s.webp" srcset="assets/foto/amanhecer-noite-s.webp 1200w, assets/foto/amanhecer-noite.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <div class="dw-stars" aria-hidden="true"></div>
+      <div class="dw-sun" aria-hidden="true"></div>
+      <div class="dw-beam" aria-hidden="true"></div>
+    </div>
+    <div class="dw-shade" aria-hidden="true"></div>
+    <div class="dw-frame" aria-hidden="true"></div>
+    <div class="dw-top">
+      <p class="lbl">Um dia na casa</p>
+      <p class="dw-clock"><b id="dw-h">05:10</b><span class="cap">Alto da Figueira · São Paulo</span></p>
+    </div>
+    <div class="dw-ph">
+      <p class="dw-w" data-w="0.03,0.34"><span class="dw-l"><span class="it">Chegue.</span></span><small class="cap">A casa ainda acesa, o jardim em silêncio.</small></p>
+      <p class="dw-w" data-w="0.36,0.66"><span class="dw-l"><span class="it">Entre.</span></span><small class="cap">A primeira luz desenha a fachada.</small></p>
+      <p class="dw-w" data-w="0.68,1.01"><span class="dw-l"><span class="it">Fique.</span></span><small class="cap">O dia começa no jardim.</small></p>
+    </div>
+    <div class="dw-foot">
+      <span class="cap">Casa Vento Sul</span>
+      <div class="dw-bar" aria-hidden="true"><i id="dw-bar"></i><em id="dw-dot"></em></div>
+      <a class="btn btn-l btn-s" href="imovel.html?p=casa-vento-sul">Ver a casa <i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="sec intro" id="metodo" data-hud="Método">
+  <div class="wrap g">
+    <p class="lbl">(01) Método</p>
+    <p class="statement" id="mf">Apresento poucas propriedades, mas conheço cada uma por dentro: como a luz entra de manhã, onde a sombra cai à tarde e como a casa soa à noite.</p>
+    <figure class="intro-fig fr rimg"><img src="assets/foto/vento-cozinha.webp" alt="Cozinha da Casa Vento Sul com viga de madeira e luz natural" loading="lazy" decoding="async"></figure>
+    <p class="intro-side rv">Cada imóvel da coleção foi visitado em horários diferentes do dia, fotografado e filmado antes de ser apresentado. Nada entra na lista sem essa visita.</p>
+    <p class="sign rv">— Helena</p>
+    <dl class="nums">
+      <div><dt><span data-count="12">12</span><small>anos</small></dt><dd>de mercado em São Paulo</dd></div>
+      <div><dt><span data-count="140">140</span></dt><dd>famílias atendidas</dd></div>
+      <div><dt><span data-count="38">38</span><small>dias</small></dt><dd>prazo médio entre visita e proposta</dd></div>
+      <div><dt><span data-count="5">5</span></dt><dd>imóveis por vez, nunca mais</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- FAIXA EM MOVIMENTO -->
+<div class="marq" aria-hidden="true"><div class="marq-t" id="marq"><span>Alto da Figueira</span><i>●</i><span class="it">Centro Velho</span><i>●</i><span>Vila das Pedras</span><i>●</i><span class="it">Jardim das Acácias</span><i>●</i><span>Beira-Rio</span><i>●</i></div></div>
+
+<!-- DIFERENCIAIS -->
+<section class="pil" id="diferenciais" data-hud="Diferenciais" aria-label="Como a Helena trabalha">
+  <div class="wrap">
+    <div class="pil-box">
+      <p class="pil-t"><span class="it">O que acompanha</span> cada imóvel</p>
+      <ul class="pil-l">
+        <li class="rv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Visita em três horários</h3><p>Manhã, tarde e noite: você vê como a luz entra e como a casa soa antes de decidir.</p></li>
+        <li class="rv" style="--d:.1s"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/></svg><h3>Dossiê completo</h3><p>Planta técnica, documentação, custos e histórico do bairro, organizados antes da primeira visita.</p></li>
+        <li class="rv" style="--d:.2s"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H21M17 12v3M20 12v2"/></svg><h3>Da proposta à chave</h3><p>Acompanho a negociação, a vistoria e a entrega. Uma única pessoa, do começo ao fim.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COLEÇÃO -->
+<section class="sec col" id="colecao" data-hud="Coleção">
+  <div class="wrap">
+    <header class="g sec-head">
+      <p class="lbl">(02) Coleção</p>
+      <h2 class="h2 split">Cinco <span class="it">propriedades.</span></h2>
+      <p class="sec-note rv">Casas e apartamentos entre R$ 1,35 mi e R$ 3,2 mi, todos visitados antes de entrar aqui.</p>
+    </header>
+    <div class="pcs" id="props"></div>
+    <div class="col-more rv"><p>Prefere comparar lado a lado?</p><div><a class="btn" href="catalogo.html">Abrir o catálogo <i aria-hidden="true">→</i></a><a class="ln" href="assets/catalogo-helena-aragao.pdf" download>Baixar em PDF <i aria-hidden="true">↓</i></a></div></div>
+  </div>
+</section>
+
+<!-- POR DENTRO: as fotos se trocam em persianas com a rolagem (adaptado de Codrops, MIT) -->
+<section class="bl" id="por-dentro" data-blinds data-hud="Por dentro" data-imgs="terracos-sala,vento-cozinha,pedra-quarto,cais-sala" data-fx="h,grid,v" aria-label="Ambientes das casas">
+  <div class="bl-pin">
+    <div class="bl-stage"></div>
+    <div class="bl-shade" aria-hidden="true"></div>
+    <div class="bl-frame" aria-hidden="true"></div>
+    <div class="bl-top"><p class="lbl">Por dentro</p><p class="cap bl-n"><b>01</b> / 04</p></div>
+    <div class="bl-txts">
+      <div class="bl-t"><p class="cap">Residência Terraços · Sala aberta</p><h3 class="bl-h">A sala <span class="it">que se abre.</span></h3><a class="ln" href="imovel.html?p=residencia-terracos">Ver a casa <i aria-hidden="true">→</i></a></div>
+      <div class="bl-t"><p class="cap">Casa Vento Sul · Cozinha</p><h3 class="bl-h">A cozinha <span class="it">que reúne.</span></h3><a class="ln" href="imovel.html?p=casa-vento-sul">Ver a casa <i aria-hidden="true">→</i></a></div>
+      <div class="bl-t"><p class="cap">Casa Arenito · Quarto</p><h3 class="bl-h">O quarto <span class="it">que descansa.</span></h3><a class="ln" href="imovel.html?p=casa-arenito">Ver a casa <i aria-hidden="true">→</i></a></div>
+      <div class="bl-t"><p class="cap">Apartamento Cais · Sala</p><h3 class="bl-h">A sala <span class="it">que acende.</span></h3><a class="ln" href="imovel.html?p=apartamento-cais">Ver o apartamento <i aria-hidden="true">→</i></a></div>
+    </div>
+    <div class="bl-bar" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- DO ALTO: o filme começa pequeno, como uma janela, e se abre até a tela inteira -->
+<section class="xp" id="do-alto" data-hud="Do alto" aria-label="Filme aéreo da Torre Ipê">
+  <div class="xp-pin">
+    <div class="xp-bg" aria-hidden="true"><img src="assets/foto/ipe-1-blur.webp" alt=""></div>
+    <div class="xp-m" id="xp-m">
+      <img class="xp-p" src="assets/foto/ipe-1-s.webp" srcset="assets/foto/ipe-1-s.webp 1200w, assets/foto/ipe-1.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <video class="xp-v" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src="assets/video/drone.mp4" data-s="assets/video/drone-s.mp4"></video>
+      <div class="xp-dim" aria-hidden="true"></div>
+    </div>
+    <div class="xp-fr" id="xp-fr" aria-hidden="true"></div>
+    <h2 class="xp-t"><span class="xp-a">Vista</span> <span class="xp-b it">do alto.</span></h2>
+    <p class="xp-k xp-ka cap">Torre Ipê · Centro Velho</p>
+    <p class="xp-k xp-kb cap">Role para abrir o filme</p>
+    <div class="xp-c wrap">
+      <p class="lbl">Filme aéreo</p>
+      <p class="xp-tx">Varandas de vidro, pedra clara e brises escuros: a Torre Ipê vista como ninguém a vê da rua.</p>
+      <a class="btn btn-l" href="imovel.html?p=torre-ipe">Ver a Torre Ipê <i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FILMES: cinco casas, quatro horas do dia -->
+<section class="reel rule" id="filmes" data-hud="Filmes" aria-label="Filmes das casas">
+  <div class="wrap">
+    <header class="g sec-head">
+      <p class="lbl">(03) Filmes</p>
+      <h2 class="h2 split">Quatro horas <span class="it">do dia.</span></h2>
+      <p class="sec-note rv">Passe o mouse (ou toque) para ver cada casa em movimento, na hora em que ela é melhor.</p>
+    </header>
+  </div>
+  <div class="reel-row" id="reel"></div>
+</section>
+
+<!-- ÁLBUM: galeria horizontal que anda com a rolagem -->
+<section class="alb" id="album" data-hud="Álbum" aria-label="Álbum de detalhes">
+  <div class="alb-pin">
+    <header class="alb-head wrap"><p class="lbl">(04) Álbum</p><h2 class="alb-h">Os detalhes <span class="it">que ficam.</span></h2></header>
+    <div class="alb-track" id="alb-track"></div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="sec svc rule" id="servicos" data-hud="Comprar e vender">
+  <div class="wrap g">
+    <p class="lbl">(05) Comprar e vender</p>
+    <h2 class="h2 svc-h split">Poucas opções, <span class="it">todas visitadas.</span></h2>
+    <div class="svc-col" id="comprar">
+      <h3 class="h3">Para quem <em>compra</em></h3>
+      <ol class="steps">
+        <li><i>01</i><b>Conversa</b><span>Entendo como você vive, trabalha e recebe antes de falar de metragem.</span></li>
+        <li><i>02</i><b>Seleção</b><span>Mostro de três a cinco imóveis. Nunca cinquenta.</span></li>
+        <li><i>03</i><b>Visitas</b><span>Você visita em horários diferentes para ver a luz e ouvir a rua.</span></li>
+        <li><i>04</i><b>Proposta</b><span>Negociação, documentação e chaves, com a mesma pessoa do início ao fim.</span></li>
+      </ol>
+      <a class="btn" href="#contato">Marcar conversa <i aria-hidden="true">→</i></a>
+    </div>
+    <div class="svc-col" id="vender">
+      <h3 class="h3">Para quem <em>vende</em></h3>
+      <ol class="steps">
+        <li><i>01</i><b>Avaliação</b><span>Visita técnica e preço baseado em vendas reais da região.</span></li>
+        <li><i>02</i><b>Fotografia</b><span>Foto, vídeo e maquete 3D, feitos no melhor horário da casa.</span></li>
+        <li><i>03</i><b>Público certo</b><span>Apresentação direta a compradores qualificados, sem portais genéricos.</span></li>
+        <li><i>04</i><b>Venda</b><span>Prazo médio de 38 dias entre a primeira visita e a proposta aceita.</span></li>
+      </ol>
+      <a class="btn" href="#contato">Avaliar meu imóvel <i aria-hidden="true">→</i></a>
+    </div>
+    <figure class="svc-fig fr rimg"><img src="assets/foto/ipe-4.webp" alt="Brises verticais da Torre Ipê" width="1152" height="1339" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- BAIRROS -->
+<section class="sec hoods rule" id="bairros" data-hud="Bairros">
+  <div class="wrap g">
+    <p class="lbl">(06) Onde atuo</p>
+    <h2 class="h2 hoods-h split">Cinco bairros, <span class="it">conhecidos a pé.</span></h2>
+    <div class="hoods-t">
+      <div class="tr th" aria-hidden="true"><span>Bairro</span><span>Perfil</span><span>Imóvel</span></div>
+      <ul id="hoods"></ul>
+    </div>
+    <div class="hoods-media" id="hoods-media" aria-hidden="true" data-cursor="Ver"></div>
+  </div>
+</section>
+
+<!-- ENSAIO: as fotos ficam nítidas no meio da tela e se desfazem nas bordas (adaptado de Codrops "WebGL Progressive Blur", MIT) -->
+<section class="sec ens" id="ensaio" data-hud="Ensaio">
+  <div class="wrap">
+    <header class="g sec-head">
+      <p class="lbl">(07) Ensaio</p>
+      <h2 class="h2 split">A casa em <span class="it">foco.</span></h2>
+      <p class="sec-note rv">Role devagar: cada foto ganha foco no meio da tela e se desfaz nas bordas, como o olhar numa visita.</p>
+    </header>
+    <div class="ens-l">
+      <figure class="ens-f f1 rv"><div class="ens-m" data-pb><img src="assets/foto/vento-4-s.webp" srcset="assets/foto/vento-4-s.webp 1200w, assets/foto/vento-4.webp 2400w" sizes="(max-width:900px) 100vw, 60vw" alt="Casa Vento Sul, pedra e madeira na entrada" loading="lazy" decoding="async"></div><figcaption><span class="cap">(01) Casa Vento Sul</span><span>Pedra e madeira na entrada</span></figcaption></figure>
+      <figure class="ens-f f2 rv"><div class="ens-m" data-pb><img src="assets/foto/ipe-3-s.webp" srcset="assets/foto/ipe-3-s.webp 1200w, assets/foto/ipe-3.webp 2400w" sizes="(max-width:900px) 100vw, 60vw" alt="Torre Ipê, brises ao fim da tarde" loading="lazy" decoding="async"></div><figcaption><span class="cap">(02) Torre Ipê</span><span>Brises ao fim da tarde</span></figcaption></figure>
+      <figure class="ens-f f3 rv"><div class="ens-m" data-pb><img src="assets/foto/terracos-3-s.webp" srcset="assets/foto/terracos-3-s.webp 1200w, assets/foto/terracos-3.webp 2400w" sizes="(max-width:900px) 100vw, 60vw" alt="Residência Terraços, o jardim entre os volumes" loading="lazy" decoding="async"></div><figcaption><span class="cap">(03) Residência Terraços</span><span>O jardim entre os volumes</span></figcaption></figure>
+      <figure class="ens-f f4 rv"><div class="ens-m" data-pb><img src="assets/foto/pedra-2-s.webp" srcset="assets/foto/pedra-2-s.webp 1200w, assets/foto/pedra-2.webp 2400w" sizes="(max-width:900px) 100vw, 60vw" alt="Casa Arenito, o muro de arenito" loading="lazy" decoding="async"></div><figcaption><span class="cap">(04) Casa Arenito</span><span>O muro de arenito</span></figcaption></figure>
+      <figure class="ens-f f5 rv"><div class="ens-m" data-pb><img src="assets/foto/cais-3-s.webp" srcset="assets/foto/cais-3-s.webp 1200w, assets/foto/cais-3.webp 2400w" sizes="(max-width:900px) 100vw, 60vw" alt="Apartamento Cais, a varanda acesa" loading="lazy" decoding="async"></div><figcaption><span class="cap">(05) Apartamento Cais</span><span>A varanda acesa</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sec about rule" id="sobre" data-hud="Sobre">
+  <div class="wrap g">
+    <p class="lbl">(08) Sobre</p>
+    <figure class="about-fig fr rimg"><img src="assets/foto/terracos-5.webp" alt="Forro de madeira do terraço da Residência Terraços" width="1024" height="1080" loading="lazy" decoding="async"></figure>
+    <div class="about-txt">
+      <h2 class="h2 split">Helena <span class="it">Aragão</span></h2>
+      <p class="lead rv">Corretora há doze anos, com formação em arquitetura.</p>
+      <p class="rv">Trabalho com poucos imóveis por vez para poder estar presente em cada visita, cada proposta e cada chave entregue. Antes de apresentar uma casa, volto a ela de manhã, à tarde e à noite.</p>
+      <dl class="tbl rv">
+        <div><dt>Registro</dt><dd>CRECI 000000-F (exemplo)</dd></div>
+        <div><dt>Formação</dt><dd>Arquitetura e Urbanismo</dd></div>
+        <div><dt>Atendimento</dt><dd>Seg a sáb, com hora marcada</dd></div>
+        <div><dt>Região</dt><dd>São Paulo, zona oeste e centro</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- VOZES E PERGUNTAS -->
+<section class="sec vozes rule" id="vozes" data-hud="Vozes">
+  <div class="wrap g">
+    <p class="lbl">(09) Vozes</p>
+    <h2 class="h2 split vz-h">Quem já <span class="it">entrou em casa.</span></h2>
+    <div class="vz">
+      <figure class="rv"><svg class="qm" viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V18C0 8 5 2 15 0v6C10 8 8 11 8 15h7v15zM22 30V18C22 8 27 2 37 0v6c-5 2-7 5-7 9h7v15z"/></svg><blockquote>Ela me levou à casa três vezes, em horários diferentes. Na terceira eu já sabia que era ali.</blockquote><figcaption><b>Marina T.</b><span>Comprou no Alto da Figueira</span></figcaption></figure>
+      <figure class="rv" style="--d:.1s"><svg class="qm" viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V18C0 8 5 2 15 0v6C10 8 8 11 8 15h7v15zM22 30V18C22 8 27 2 37 0v6c-5 2-7 5-7 9h7v15z"/></svg><blockquote>Vendemos em 41 dias, sem fila de curiosos. Só quem realmente queria a casa veio visitar.</blockquote><figcaption><b>Ricardo e Paula</b><span>Venderam na Vila das Pedras</span></figcaption></figure>
+      <figure class="rv" style="--d:.2s"><svg class="qm" viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V18C0 8 5 2 15 0v6C10 8 8 11 8 15h7v15zM22 30V18C22 8 27 2 37 0v6c-5 2-7 5-7 9h7v15z"/></svg><blockquote>O dossiê veio pronto. Não precisei correr atrás de nenhum papel.</blockquote><figcaption><b>André S.</b><span>Comprou no Centro Velho</span></figcaption></figure>
+    </div>
+    <p class="vz-note rv">Depoimentos de exemplo, para demonstração do layout.</p>
+    <div class="faq rv" id="faq">
+      <p class="lbl">Perguntas frequentes</p>
+      <details><summary>Quanto tempo leva entre a visita e a proposta?<i aria-hidden="true"></i></summary><p>Em média 38 dias. Cada caso é diferente: o que combinamos na primeira conversa define o ritmo.</p></details>
+      <details><summary>Posso visitar à noite?<i aria-hidden="true"></i></summary><p>Sim. Recomendo ver cada casa em dois ou três horários. Agende pela página do imóvel e escolha o período.</p></details>
+      <details><summary>Vocês cobram para avaliar o meu imóvel?<i aria-hidden="true"></i></summary><p>A primeira avaliação é uma conversa sem custo, com visita ao imóvel e uma proposta de preço justificada.</p></details>
+      <details><summary>Atendem fora de São Paulo?<i aria-hidden="true"></i></summary><p>O foco é a zona oeste e o centro de São Paulo. Para outras regiões, indico parceiros de confiança.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO: a última cena é a casa acesa à noite -->
+<section class="cta" id="contato" data-hud="Contato">
+  <div class="cta-bg"><div class="cta-clip"><img src="assets/foto/cais-2.webp" srcset="assets/foto/cais-2-s.webp 1200w, assets/foto/cais-2.webp 1920w" sizes="100vw" alt="" loading="lazy" decoding="async"></div></div>
+  <div class="wrap cta-in">
+    <p class="lbl">(10) Contato</p>
+    <h2 class="cta-h split">Venha conhecer <span class="it">um lugar.</span></h2>
+    <div class="cta-row">
+      <div class="cta-info">
+        <dl class="tbl">
+          <div><dt>E-mail</dt><dd><span id="mail">contato@helena.example</span> <button type="button" class="copy" data-copy="#mail">Copiar</button></dd></div>
+          <div><dt>Telefone</dt><dd>(00) 00000-0000</dd></div>
+          <div><dt>Atendimento</dt><dd>Seg a sáb, 9h às 19h</dd></div>
+        </dl>
+      </div>
+      <a class="orb cta-orb mag" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Helena.%20Vi%20seu%20site%20e%20gostaria%20de%20conhecer%20uma%20propriedade." rel="noopener"><span class="orb-t"><small>WhatsApp</small>Conversar<i aria-hidden="true">→</i></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-big" aria-hidden="true">Helena <span class="it">Aragão</span></p>
+    <div class="g foot-row">
+      <p class="foot-mark"><svg class="mk mk-foot" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg>Imóveis selecionados · São Paulo</p>
+      <nav class="foot-nav" aria-label="Rodapé"><a href="#colecao">Coleção</a><a href="catalogo.html">Catálogo</a><a href="#por-dentro">Por dentro</a><a href="#servicos">Comprar e vender</a><a href="#topo">Voltar ao topo ↑</a></nav>
+      <p class="foot-note">© Helena Aragão · CRECI 000000-F (exemplo). Página de demonstração: nomes, contatos e registro fictícios. Imagens: quadros de vídeos do Pexels e interiores do Pixabay.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Catálogo · Helena Aragão</title>
+<meta name="description" content="Catálogo de imóveis selecionados por Helena Aragão: casas e apartamentos em São Paulo, com filtros por tipo, valor e suítes.">
+<meta name="theme-color" content="#E5E1D8">
+<script>
+(function(){var d=document.documentElement,c=navigator.connection||{};d.classList.add('js');
+if((matchMedia('(prefers-reduced-motion: reduce)').matches)||c.saveData||/2g$/.test(c.effectiveType||'')||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2))d.classList.add('lite');
+if(matchMedia('(hover:hover) and (pointer:fine)').matches)d.classList.add('fine');
+if(!d.classList.contains('lite'))d.classList.add('px-on');})();
+</script>
+<link rel="icon" href="assets/logo/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="assets/logo/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/catalogo.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/extras.js" defer></script>
+</head>
+<body data-page="catalogo">
+<div class="veil" aria-hidden="true"><svg class="mk mk-veil" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg><b>Helena <em>Aragão</em></b></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span>Ver</span></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html" aria-label="Helena Aragão, início"><svg class="mk" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M231.34 171.18 112.63 34.20 22.58 214.29 36.00 221.00 52.77 221.00 119.37 87.80 208.66 190.82ZM108.00 141.00 108.00 221.00 124.00 221.00 124.00 141.00Z"/></svg><b>Helena <em>Aragão</em></b><span class="logo-sub">Imóveis selecionados</span></a>
+  <p class="nav-ch" id="nav-ch" aria-hidden="true"><span id="nav-n">01</span><b id="nav-t">Catálogo</b></p>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="index.html#colecao"><span data-t="Coleção">Coleção</span></a><a href="catalogo.html"><span data-t="Catálogo">Catálogo</span></a><a href="index.html#filmes"><span data-t="Filmes">Filmes</span></a><a href="index.html#servicos"><span data-t="Comprar e vender">Comprar e vender</span></a><a href="index.html#sobre"><span data-t="Sobre">Sobre</span></a><a href="index.html#contato"><span data-t="Agendar visita">Agendar visita</span></a>
+  </nav>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="mb-t"><span>Menu</span><span>Fechar</span></span><span class="mb-i" aria-hidden="true"><i></i><i></i></span></button>
+</header>
+<div class="menu" id="menu" inert>
+  <nav class="menu-l" aria-label="Menu">
+    <a href="index.html#colecao" style="--i:0"><i>01</i><span>Coleção</span></a><a href="catalogo.html" style="--i:1"><i>02</i><span>Catálogo</span></a><a href="index.html#filmes" style="--i:2"><i>03</i><span>Filmes</span></a><a href="index.html#servicos" style="--i:3"><i>04</i><span>Comprar e vender</span></a><a href="index.html#sobre" style="--i:4"><i>05</i><span>Sobre</span></a><a href="index.html#contato" style="--i:5"><i>06</i><span>Agendar <em>visita</em></span></a>
+  </nav>
+  <div class="menu-fig">
+    <img id="menu-img" src="assets/foto/vento-3-s.webp" alt="" loading="lazy" decoding="async">
+    <div><p>São Paulo · Atendimento com hora marcada, de segunda a sábado.</p><a href="https://wa.me/5500000000000" rel="noopener">WhatsApp →</a></div>
+  </div>
+</div>
+
+<main>
+<section class="cat-hero" data-hud="Catálogo">
+  <div class="wrap">
+    <p class="lbl">Catálogo · São Paulo</p>
+    <h1 class="cat-h split">Todos os <span class="it">imóveis.</span></h1>
+    <div class="g cat-top">
+      <p class="cat-lead rv">Casas e apartamentos escolhidos um a um e visitados antes de entrar aqui. Filtre por tipo, valor ou suítes, ou leve o catálogo completo em PDF.</p>
+      <a class="btn-pdf rv" href="assets/catalogo-helena-aragao.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/></svg><span><b>Baixar catálogo em PDF</b><small>Todos os imóveis, para enviar no WhatsApp</small></span></a>
+    </div>
+  </div>
+</section>
+<section class="cat-body">
+  <div class="wrap">
+    <div class="cat-bar" role="region" aria-label="Filtros">
+      <div class="cat-f">
+        <div class="flt-g"><p class="cap">Tipo</p><div class="flt" data-k="tipo"><button type="button" data-v="todos" aria-pressed="true">Todos</button><button type="button" data-v="Casa" aria-pressed="false">Casas</button><button type="button" data-v="Apartamento" aria-pressed="false">Apartamentos</button></div></div>
+        <div class="flt-g"><p class="cap">Valor</p><div class="flt" data-k="valor"><button type="button" data-v="todos" aria-pressed="true">Todos</button><button type="button" data-v="ate2" aria-pressed="false">Até R$ 2 mi</button><button type="button" data-v="2a3" aria-pressed="false">R$ 2 a 3 mi</button><button type="button" data-v="3mais" aria-pressed="false">Acima de R$ 3 mi</button></div></div>
+        <div class="flt-g"><p class="cap">Suítes</p><div class="flt" data-k="suites"><button type="button" data-v="0" aria-pressed="true">Todas</button><button type="button" data-v="3" aria-pressed="false">3 ou mais</button><button type="button" data-v="4" aria-pressed="false">4 ou mais</button></div></div>
+        <div class="flt-g"><p class="cap">Ordenar</p><div class="flt" data-k="ord"><button type="button" data-v="padrao" aria-pressed="true">Seleção</button><button type="button" data-v="menor" aria-pressed="false">Menor valor</button><button type="button" data-v="maior" aria-pressed="false">Maior valor</button><button type="button" data-v="area" aria-pressed="false">Maior área</button></div></div>
+      </div>
+      <p class="cat-n" aria-live="polite"><b id="cat-n">5 imóveis</b></p>
+    </div>
+    <div class="cat-grid" id="cat-grid"></div>
+    <div class="cat-empty" id="cat-empty" hidden><p>Nenhum imóvel com esses filtros.</p><button type="button" class="ln" id="cat-clear">Limpar filtros <i aria-hidden="true">→</i></button></div>
+  </div>
+</section>
+<section class="cat-end">
+  <div class="wrap g">
+    <h2 class="h2">Não achou <span class="it">o que procura?</span></h2>
+    <p class="cat-lead">Conte o que você busca. Muitos imóveis não chegam a ser anunciados.</p>
+    <a class="orb mag" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Helena.%20Vi%20o%20cat%C3%A1logo%20e%20gostaria%20de%20conversar." rel="noopener"><span class="orb-t"><small>WhatsApp</small>Conversar<i aria-hidden="true">→</i></span></a>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap g foot-row"><p class="foot-mark">Helena Aragão</p><nav class="foot-nav" aria-label="Rodapé"><a href="index.html#colecao">Coleção</a><a href="catalogo.html">Catálogo</a><a href="index.html#servicos">Comprar e vender</a><a href="index.html#contato">Contato</a></nav><p class="foot-note">© Helena Aragão · CRECI 000000-F (exemplo). Página de demonstração: dados, contatos e registro fictícios.</p></div></footer>
+</body>
+</html>
